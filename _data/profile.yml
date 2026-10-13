@@ -14,8 +14,8 @@ short_bio: >-
   <p>My research interests lie in <strong>robot learning</strong>, <strong>tactile sensing</strong>, <strong>contact-rich manipulation</strong>, and <strong>embodied AI</strong>. I am especially interested in how robots can use physical contact feedback to adapt their actions.</p>
   <p>Currently, I am exploring fast tactile-reactive control and residual action correction for robotic manipulation.</p>
 
-portrait_url: "https://avatars.githubusercontent.com/u/218725186?v=4"
-portrait_caption: "Mingzhe Liu — GitHub avatar"
+portrait_url: "/assets/images/photos/mingzhe-liu.jpg"
+portrait_caption: "Mingzhe Liu"
 # Add a public academic email when ready.
 
 education:
