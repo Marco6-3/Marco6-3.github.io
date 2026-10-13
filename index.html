@@ -1,39 +1,37 @@
 ---
 layout: default
-title : Homepage
+title: Mingzhe Liu | Academic Homepage
 navbar_title: Home
 ---
 
 <div class="row">
-    <div class="col-lg-3 col-md-4">
-        {% include widgets/profile_card_mini.html %}
+  <div class="col-lg-3 col-md-4">
+    {% include widgets/profile_card_mini.html %}
+  </div>
+  <div class="col-lg-9 col-md-8">
+    {% include widgets/profile_card_bio_only.html %}
+    {% if site.data.display.homepage.show_experience %}
+      {% include widgets/experience_card.html %}
+    {% endif %}
+    <div class="row mt-3" id="research">
+      <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+          <div class="card-body p-4">
+            <h5 class="mb-3"><i class="fas fa-robot"></i> Research Projects</h5>
+            <div class="mb-4">
+              <h6>Bimanual Towel Folding with Corrective Human-in-the-Loop Fine-Tuning</h6>
+              <p class="mb-2">A dual-arm cloth manipulation project exploring demonstration-based learning and human-in-the-loop corrective fine-tuning for towel folding.</p>
+              <a href="https://dream25851.github.io/Bimanual_Folding/index.html" target="_blank" rel="noopener">Project Page <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <hr>
+            <div>
+              <h6>Tactile-Reactive Robot Manipulation <span class="badge badge-light">Ongoing</span></h6>
+              <p class="mb-2">Investigating compact contact representations and fast tactile-driven action corrections for contact-rich robotic manipulation, with an emphasis on closed-loop evaluation.</p>
+              <a href="https://github.com/Marco6-3/ICRA2028" target="_blank" rel="noopener">Research Repository <i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-9 col-md-8">
-
-        {% include widgets/profile_card_bio_only.html %}
-
-        <!-- Debugging widgets -->
-        {% include widgets/debug_repo_name.html %}
-        {% include widgets/debug_url.html %}
-
-        {% if site.data.display.homepage.show_experience %}
-            {% include widgets/experience_card.html %}
-        {% endif %}
-
-        {% if site.data.display.homepage.show_news %}
-        {% assign count_news = site.news | size %}
-        {% if count_news > 0 %}
-        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
-        {% endif %}
-        {% endif %}
-
-        {% if site.data.display.homepage.show_selected_publications %}
-        {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
-        {%
-        include widgets/publication_card.html
-        publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
-        %}
-        {% endif %}
-    </div>
+  </div>
 </div>
