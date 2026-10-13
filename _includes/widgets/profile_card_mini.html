@@ -26,6 +26,9 @@
                     </div>
                 </div>
 
+                {% if site.data.profile.secondary_name %}
+                <div class="row mb-2"><div class="col text-center text-muted">{{ site.data.profile.secondary_name }}</div></div>
+                {% endif %}
                 <div class="row small">
                     <div class="col text-center">
                         {% for position in site.data.profile.positions %}
@@ -58,7 +61,7 @@
                         {% endif %}
                         
                         {% if site.data.profile.github %}
-                        <a class="px-1 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
+                        <a class="px-1 no-break" target="_blank" aria-label="GitHub profile" rel="noopener" href="https://github.com/{{ site.data.profile.github }}">
                             <i class="fab fa-github"></i>
                         </a>
                         {% endif %}
